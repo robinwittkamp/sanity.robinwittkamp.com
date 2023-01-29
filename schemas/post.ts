@@ -26,22 +26,30 @@ export default defineType({
       to: {type: 'author'},
     }),
     defineField({
-      name: 'mainImage',
-      title: 'Main image',
+      name: 'coverImage',
+      title: 'Cover image',
       type: 'image',
-      options: {
-        hotspot: true,
-      },
+      // options: {
+      //   hotspot: true,
+      // },
+      fields: [
+        {
+          name: "alt",
+          title: "Alt Text",
+          type: "string",
+        },
+      ],
     }),
     defineField({
-      name: 'publishedAt',
-      title: 'Published at',
+      name: 'date',
+      title: 'Date',
       type: 'datetime',
     }),
     defineField({
-      name: 'body',
-      title: 'Body',
-      type: 'blockContent',
+      name: 'content',
+      title: 'Content',
+      type: 'array',
+      of: [{type: 'block'}]
     }),
   ],
 
