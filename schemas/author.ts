@@ -23,23 +23,30 @@ export default defineType({
       name: 'image',
       title: 'Image',
       type: 'image',
-      options: {
-        hotspot: true,
-      },
-    }),
-    defineField({
-      name: 'bio',
-      title: 'Bio',
-      type: 'array',
-      of: [
+      // options: {
+      //   hotspot: true,
+      // },
+      fields: [
         {
-          title: 'Block',
-          type: 'block',
-          styles: [{title: 'Normal', value: 'normal'}],
-          lists: [],
+          name: "alt",
+          title: "Alt Text",
+          type: "string",
         },
       ],
     }),
+    // defineField({
+    //   name: 'bio',
+    //   title: 'Bio',
+    //   type: 'array',
+    //   of: [
+    //     {
+    //       title: 'Block',
+    //       type: 'block',
+    //       styles: [{title: 'Normal', value: 'normal'}],
+    //       lists: [],
+    //     },
+    //   ],
+    // }),
   ],
   preview: {
     select: {
