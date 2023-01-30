@@ -1,9 +1,14 @@
-import author from './author'
-import blockContent from './blockContent'
-import link from './link'
-import navigation from './navigation'
-import navigationItem from './navigationItem'
-import post from './post'
+// Array types
+import blockContent from './arrays/blockContent'
+
+// Document types
+import author from './documents/author'
+import navigation from './documents/navigation'
+import post from './documents/post'
+
+// Object types
+import navigationItem from './objects/navigationItem'
+import link from './objects/link'
 
 export const schemaTypes = [
   author,
