@@ -1,23 +1,25 @@
-export default {
+import {defineField, defineType} from 'sanity'
+
+export default defineType({
   name: "navigationItem",
   title: "Navigation Item",
   type: "object",
   fields: [
-    {
-      name: "text",
-      title: "Text",
+    defineField({
+      name: "title",
+      title: "Title",
       type: "string",
-    },
-    {
-      name: "link",
-      title: "Link",
-      type: "link", // referenc to custom link object
-    }
+    }),
+    defineField({
+      name: "url",
+      title: "URL",
+      type: "url",
+      validation: Rule => Rule.uri({ allowRelative: true }),
+    }),
   ],
   preview: {
     select: {
-      title: "text",
-      subtitle: "link"
+      title: "title",
     }
   }
-};
+})
