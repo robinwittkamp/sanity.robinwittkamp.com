@@ -11,7 +11,7 @@ export default {
     {
       name: "link",
       title: "Link",
-      type: "link", // references link object
+      type: "link", // referenc to custom link object
     }
   ],
   preview: {

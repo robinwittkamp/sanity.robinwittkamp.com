@@ -29,7 +29,7 @@ export default defineType({
       fields: [
         {
           name: "alt",
-          title: "Alt Text",
+          title: "Alternative Text",
           type: "string",
         },
       ],
