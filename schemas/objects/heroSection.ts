@@ -33,7 +33,7 @@ export default {
       fields: [
         {
           name: 'alt',
-          title: 'Alternative Text'
+          title: 'Alternative Text',
           type: 'string',
         }
       ]
