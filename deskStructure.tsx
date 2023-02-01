@@ -74,6 +74,6 @@ export const deskStructure = (S) =>
       // S.divider(),
       // List out the rest of the document types, but filter out the singletons from above
       ...S.documentTypeListItems().filter(
-        listItem => !['home', 'navigation'].includes(listItem.getId())
+        listItem => !['home', 'navigation', 'imprint', 'privacyPolicy'].includes(listItem.getId())
       )
     ])
