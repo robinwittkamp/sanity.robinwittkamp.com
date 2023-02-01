@@ -4,17 +4,48 @@ export default defineType({
   name: 'home',
   title: 'Home',
   type: 'document',
+  groups: [
+    {
+      name: 'hero',
+      title: 'Hero',
+    },
+    {
+      name: 'about',
+      title: 'About',
+    },
+    {
+      name: 'projects',
+      title: 'Projects',
+    },
+    {
+      name: 'contact',
+      title: 'Contact',
+    },
+  ],
   fields: [
     defineField({
-      name: 'hero',
-      title: 'Name',
-      type: 'string',
+      name: "heroSection",
+      title: "Hero section",
+      type: "heroSection",
+      group: 'hero',
     }),
     defineField({
-      name: "sections",
-      title: "Sections",
-      type: "array",
-      of: [{ type: "heroSection" }]
+      name: "aboutSection",
+      title: "About section",
+      type: "aboutSection",
+      group: 'about',
+    }),
+    defineField({
+      name: "projectsSection",
+      title: "Projects section",
+      type: "projectsSection",
+      group: 'projects',
+    }),
+    defineField({
+      name: "contactSection",
+      title: "Contact section",
+      type: "contactSection",
+      group: 'contact',
     }),
   ],
   preview: {
