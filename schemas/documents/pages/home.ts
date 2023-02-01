@@ -10,16 +10,16 @@ export default defineType({
       title: 'Name',
       type: 'string',
     }),
-    // defineField({
-    //   name: "sections",
-    //   title: "Sections",
-    //   type: "array",
-    //   of: [{ type: "heroSection" }]
-    // }),
+    defineField({
+      name: "sections",
+      title: "Sections",
+      type: "array",
+      of: [{ type: "heroSection" }]
+    }),
   ],
-  // preview: {
-  //   select: {
-  //     title: 'home',
-  //   },
-  // },
+  preview: {
+    select: {
+      title: 'title',
+    },
+  },
 })

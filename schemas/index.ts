@@ -3,7 +3,7 @@ import blockContent from './arrays/blockContent'
 
 // Document types
 import author from './documents/author'
-import home from './documents/home'
+import home from './documents/pages/home'
 import navigation from './documents/navigation'
 import post from './documents/post'
 
