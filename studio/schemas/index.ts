@@ -3,6 +3,7 @@ import blockContent from './arrays/blockContent'
 
 // Document types
 // import author from './documents/author'
+import contact from './documents/pages/contact'
 import home from './documents/pages/home'
 import imprint from './documents/pages/imprint'
 import navigation from './documents/navigation'
@@ -25,6 +26,7 @@ export const schemaTypes = [
 
   // Document types
   // author,
+  contact,
   home,
   imprint,
   navigation,

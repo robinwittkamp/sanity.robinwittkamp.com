@@ -37,13 +37,13 @@ export const deskStructure = (S) =>
             //     S.document().title('About').schemaType('about').documentId('about')
             //   ),
             // List item: Contact 
-            // S.listItem()
-            //   .title('Contact')
-            //   .icon(emoji('📞'))
-            //   .child(
-            //     // Document: Contact
-            //     S.document().title('Contact').schemaType('contact').documentId('contact')
-            //   ),
+            S.listItem()
+              .title('Contact')
+              .icon(emoji('📞'))
+              .child(
+                // Document: Contact
+                S.document().title('Contact').schemaType('contact').documentId('contact')
+              ),
             // List item: Imprint
             S.listItem()
               .title('Imprint')
@@ -74,6 +74,6 @@ export const deskStructure = (S) =>
       // S.divider(),
       // List out the rest of the document types, but filter out the singletons from above
       ...S.documentTypeListItems().filter(
-        listItem => !['home', 'navigation', 'imprint', 'privacyPolicy'].includes(listItem.getId())
+        listItem => !['home', 'navigation', 'imprint', 'privacyPolicy', 'contact'].includes(listItem.getId())
       )
     ])
