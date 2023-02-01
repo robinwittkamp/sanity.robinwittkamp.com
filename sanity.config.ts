@@ -12,6 +12,7 @@ export default defineConfig({
   dataset: 'production',
   plugins: [
     deskTool({
+      // Load custom desk structure
       structure: deskStructure,
     }),
     visionTool(),
