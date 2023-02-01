@@ -10,12 +10,12 @@ export default defineType({
       title: 'Title',
       type: 'string',
     }),
-    {
+    defineField({
       name: "navigationItems",
       title: "Navigation Items",
       type: "array",
       of: [{ type: "navigationItem" }]
-    }
+    }),
   ],
   preview: {
     select: {
