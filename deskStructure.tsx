@@ -9,7 +9,7 @@ const emoji = (emoji: String) => {
 
 export const deskStructure = (S) =>
   S.list()
-    .title('Website')
+    .title('Content')
     .items([
       // List item: Pages
       S.listItem()
@@ -20,27 +20,58 @@ export const deskStructure = (S) =>
           S.list()
           .title('Pages')
           .items([
+            // List item: Home
+            S.listItem()
+              .title('Home')
+              .icon(emoji('🏠'))
+              .child(
+                // Document: Home
+                S.document().title('Home').schemaType('home').documentId('home')
+              ),
+            // List item: About
             // S.listItem()
-            //   .title('Home')
-            //   .child(S.documentId().schemaType('home').documentId('home')),
+            //   .title('About')
+            //   .icon(emoji('👨‍💻'))
+            //   .child(
+            //     // Document: About
+            //     S.document().title('About').schemaType('about').documentId('about')
+            //   ),
+            // List item: Contact 
             // S.listItem()
             //   .title('Contact')
-            //   .child(S.documentId().schemaType('contact').documentId('contact')),
-            // S.listItem()
-            //   .title('Imprint')
-            //   .child(S.documentId().schemaType('imprint').documentId('imprint')),
-            // S.listItem()
-            //   .title('Privacy Policy')
-            //   .child(S.documentId().schemaType('privacy-policy').documentId('privacy-policy')),
+            //   .icon(emoji('📞'))
+            //   .child(
+            //     // Document: Contact
+            //     S.document().title('Contact').schemaType('contact').documentId('contact')
+            //   ),
+            // List item: Imprint
+            S.listItem()
+              .title('Imprint')
+              .icon(emoji('📜'))
+              .child(
+                // Document: Imprint
+                S.document().title('Imprint').schemaType('imprint').documentId('imprint')
+              ),
+            // List item: Privacy Policy
+            S.listItem()
+              .title('Privacy Policy')
+              .icon(emoji('🔒'))
+              .child(
+                // Document: Privacy Policy
+                S.document().title('Privacy Policy').schemaType('privacyPolicy').documentId('privacyPolicy')
+              ),
           ])
         ),
-      S.divider(),
+      // S.divider(),
       // List item: Navigations
       S.listItem()
         .title('Navigations')
         .icon(emoji('🧭'))
-        .child(S.documentTypeList('navigation').title('Navigations')),
-      S.divider(),
+        .child(
+          // Document List: Navigations
+          S.documentTypeList('navigation').title('Navigations')
+        ),
+      // S.divider(),
       // List out the rest of the document types, but filter out the singletons from above
       ...S.documentTypeListItems().filter(
         listItem => !['home', 'navigation'].includes(listItem.getId())
