@@ -13,6 +13,7 @@ import privacyPolicy from './documents/pages/privacy-policy'
 // Object types
 import aboutSection from './objects/sections/aboutSection'
 import button from './objects/button'
+import contactForm from './objects/contactForm'
 import contactSection from './objects/sections/contactSection'
 import heroSection from './objects/sections/heroSection'
 import link from './objects/link'
@@ -36,6 +37,7 @@ export const schemaTypes = [
   // Object types
   aboutSection,
   button,
+  contactForm,
   contactSection,
   heroSection,
   link,
