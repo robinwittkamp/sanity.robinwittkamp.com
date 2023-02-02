@@ -18,6 +18,7 @@ import contactSection from './objects/sections/contactSection'
 import heroSection from './objects/sections/heroSection'
 import link from './objects/link'
 import navigationItem from './objects/navigationItem'
+import pageMeta from './objects/pageMeta'
 import project from './objects/project'
 import projectsSection from './objects/sections/projectsSection'
 
@@ -42,6 +43,7 @@ export const schemaTypes = [
   heroSection,
   link,
   navigationItem,
+  pageMeta,
   project,
   projectsSection,
 ]
