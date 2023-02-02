@@ -16,5 +16,8 @@ export default defineType({
       type: "url",
       validation: Rule => Rule.uri({ allowRelative: true }),
     }),
-  ]
+  ],
+  initialValue: {
+    external: false
+  }
 })
