@@ -2,6 +2,8 @@
 import blockContent from './arrays/blockContent'
 
 // Document types
+import error404 from './documents/pages/404'
+import error500 from './documents/pages/500'
 // import author from './documents/author'
 import contact from './documents/pages/contact'
 import home from './documents/pages/home'
@@ -29,6 +31,8 @@ export const schemaTypes = [
   // Document types
   // author,
   contact,
+  error404,
+  error500,
   home,
   imprint,
   navigation,
