@@ -40,5 +40,10 @@ export default defineType({
         }
       ]
     }),
+    defineField({
+      name: 'logosDescription',
+      title: 'Logo Description',
+      type: 'string',
+    }),
   ]
 })
