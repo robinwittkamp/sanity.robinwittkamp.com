@@ -16,6 +16,11 @@ export default defineType({
       type: "array",
       of: [{type: "block"}]
     }),
+    defineField({
+      name: "contactForm",
+      title: "Contact Form",
+      type: "contactForm",
+    }),
   ],
   preview: {
     select: {
