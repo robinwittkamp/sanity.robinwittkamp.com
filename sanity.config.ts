@@ -18,6 +18,17 @@ export default defineConfig({
       // Load custom desk structure
       structure: deskStructure,
     }),
+    languageFilter({
+      supportedLanguages: [
+        {id: 'en', title: 'English'},
+        {id: 'de', title: 'German'},
+      ],
+      defaultLanguages: ['en'],
+      // Only show language filter for document type `page` (schemaType.name)
+      documentTypes: ['page'],
+      filterField: (enclosingType, field, selectedLanguageIds) =>
+        !enclosingType.name.startsWith('locale') || selectedLanguageIds.includes(field.name),
+    }),
     media(),
     visionTool(),
   ],
