@@ -14,7 +14,10 @@ export default defineType({
       name: "url",
       title: "URL",
       type: "url",
-      validation: Rule => Rule.uri({ allowRelative: true }),
+      validation: Rule => Rule.uri({ 
+        allowRelative: true,
+        scheme: ['https']
+      }),
       // hidden: ({parent}) => parent?.external !== true
     }),
   ],
