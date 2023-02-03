@@ -21,6 +21,7 @@ import contactForm from './objects/contactForm'
 import contactSection from './objects/sections/contactSection'
 import heroSection from './objects/sections/heroSection'
 import link from './objects/link'
+import localeString from './objects/localeString'
 import navigation from './objects/navigation'
 import navigationItem from './objects/navigationItem'
 import pageMeta from './objects/pageMeta'
@@ -51,6 +52,7 @@ export const schemaTypes = [
   contactSection,
   heroSection,
   link,
+  localeString,
   navigation,
   navigationItem,
   pageMeta,
