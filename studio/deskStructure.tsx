@@ -60,6 +60,22 @@ export const deskStructure = (S) =>
                 // Document: Privacy Policy
                 S.document().title('Privacy Policy').schemaType('privacyPolicy').documentId('privacyPolicy')
               ),
+            // List item: Error 404
+            S.listItem()
+            .title('404')
+            .icon(emoji('❗'))
+            .child(
+              // Document: 404
+              S.document().title('404').schemaType('404').documentId('404')
+            ),
+            // List item: Error 500
+            S.listItem()
+            .title('500')
+            .icon(emoji('❗'))
+            .child(
+              // Document: 500
+              S.document().title('500').schemaType('500').documentId('500')
+            ),
           ])
         ),
       // S.divider(),
@@ -74,6 +90,14 @@ export const deskStructure = (S) =>
       // S.divider(),
       // List out the rest of the document types, but filter out the singletons from above
       ...S.documentTypeListItems().filter(
-        listItem => !['home', 'navigation', 'imprint', 'privacyPolicy', 'contact'].includes(listItem.getId())
+        listItem => ![
+          'home',
+          'contact',
+          'imprint',
+          'privacyPolicy',
+          '404',
+          '500',
+          'navigation'
+        ].includes(listItem.getId())
       )
     ])
