@@ -21,11 +21,11 @@ export default defineConfig({
     languageFilter({
       supportedLanguages: [
         {id: 'en', title: 'English'},
-        {id: 'de', title: 'German'},
+        {id: 'de', title: 'Deutsch'},
       ],
       defaultLanguages: ['en'],
       // Only show language filter for document type `page` (schemaType.name)
-      documentTypes: ['page'],
+      documentTypes: ['home', 'contact', 'imprint', 'privacy-policy', '404', '500'],
       filterField: (enclosingType, field, selectedLanguageIds) =>
         !enclosingType.name.startsWith('locale') || selectedLanguageIds.includes(field.name),
     }),
