@@ -6,21 +6,9 @@ export default defineType({
   type: 'document',
   groups: [
     {
-      name: 'hero',
-      title: 'Hero',
+      name: 'content',
+      title: 'Content',
       default: true,
-    },
-    {
-      name: 'about',
-      title: 'About',
-    },
-    {
-      name: 'projects',
-      title: 'Projects',
-    },
-    {
-      name: 'contact',
-      title: 'Contact',
     },
     {
       name: 'seo',
@@ -32,25 +20,25 @@ export default defineType({
       name: "heroSection",
       title: "Hero section",
       type: "heroSection",
-      group: 'hero',
+      group: 'content',
     }),
     defineField({
       name: "aboutSection",
       title: "About section",
       type: "aboutSection",
-      group: 'about',
+      group: 'content',
     }),
     defineField({
       name: "projectsSection",
       title: "Projects section",
       type: "projectsSection",
-      group: 'projects',
+      group: 'content',
     }),
     defineField({
       name: "contactSection",
       title: "Contact section",
       type: "contactSection",
-      group: 'contact',
+      group: 'content',
     }),
     defineField({
       name: 'seo',
