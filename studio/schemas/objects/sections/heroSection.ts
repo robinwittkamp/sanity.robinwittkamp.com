@@ -42,7 +42,7 @@ export default defineType({
     }),
     defineField({
       name: 'logosDescription',
-      title: 'Logo Description',
+      title: 'Logos Description',
       type: 'string',
     }),
   ]
