@@ -108,6 +108,7 @@ export const deskStructure = (S) =>
           // 'navigation',
           'header',
           'footer',
+          'media.tag',
         ].includes(listItem.getId())
       )
     ])
