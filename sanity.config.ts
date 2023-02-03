@@ -1,6 +1,9 @@
 import {defineConfig} from 'sanity'
 import {deskTool} from 'sanity/desk'
+import {languageFilter} from '@sanity/language-filter'
+import {media} from 'sanity-plugin-media'
 import {visionTool} from '@sanity/vision'
+import { withDocumentI18nPlugin, getDocumentList } from '@sanity/document-internationalization'
 
 import {schemaTypes} from './studio/schemas'
 import {deskStructure} from './studio/deskStructure'
@@ -15,6 +18,7 @@ export default defineConfig({
       // Load custom desk structure
       structure: deskStructure,
     }),
+    media(),
     visionTool(),
   ],
   schema: {
