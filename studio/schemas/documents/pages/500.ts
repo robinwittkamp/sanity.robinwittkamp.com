@@ -6,21 +6,16 @@ export default defineType({
   type: 'document',
   groups: [
     {
+      name: 'content',
+      title: 'Content',
+      default: true,
+    },
+    {
       name: 'seo',
       title: 'SEO',
     },
-    {
-      name: 'content',
-      title: 'Content',
-    }
   ],
   fields: [
-    defineField({
-      name: 'seo',
-      title: 'SEO',
-      type: 'pageMeta',
-      group: 'seo',
-    }),
     defineField({
       name: "heading",
       title: "Heading",
@@ -38,6 +33,12 @@ export default defineType({
       title: "Button",
       type: "button",
       group: 'content',
+    }),
+    defineField({
+      name: 'seo',
+      title: 'SEO',
+      type: 'pageMeta',
+      group: 'seo',
     }),
   ],
   // preview: {

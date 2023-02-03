@@ -6,12 +6,9 @@ export default defineType({
   type: 'document',
   groups: [
     {
-      name: 'seo',
-      title: 'SEO',
-    },
-    {
       name: 'hero',
       title: 'Hero',
+      default: true,
     },
     {
       name: 'about',
@@ -25,14 +22,12 @@ export default defineType({
       name: 'contact',
       title: 'Contact',
     },
-  ],
-  fields: [
-    defineField({
+    {
       name: 'seo',
       title: 'SEO',
-      type: 'pageMeta',
-      group: 'seo',
-    }),
+    }
+  ],
+  fields: [
     defineField({
       name: "heroSection",
       title: "Hero section",
@@ -56,6 +51,12 @@ export default defineType({
       title: "Contact section",
       type: "contactSection",
       group: 'contact',
+    }),
+    defineField({
+      name: 'seo',
+      title: 'SEO',
+      type: 'pageMeta',
+      group: 'seo',
     }),
   ],
   // preview: {
