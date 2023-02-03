@@ -13,26 +13,30 @@ export default defineType({
     {
       title: 'Translations',
       name: 'translations',
-      options: { collapsible: true }
+      options: {
+        collapsible: true,
+        collapsed: true,
+      }
     }
   ],
   // Dynamically define one field per language
-  fields: supportedLanguages.map(lang => ({
-    title: lang.title,
-    name: lang.id,
-    type: 'string',
-    fieldset: lang.isDefault ? null : 'translations'
-  }))
-  // fields: [
-  //   defineField({
-  //     name: 'en',
-  //     title: 'English',
-  //     type: 'string',
-  //   }),
-  //   defineField({
-  //     name: "de",
-  //     title: "German",
-  //     type: "string",
-  //   }),
-  // ],
+  // fields: supportedLanguages.map(lang => ({
+  //   title: lang.title,
+  //   name: lang.id,
+  //   type: 'string',
+  //   fieldset: lang.isDefault ? null : 'translations'
+  // }))
+  fields: [
+    defineField({
+      name: 'en',
+      title: 'English',
+      type: 'string',
+    }),
+    defineField({
+      name: "de",
+      title: "German",
+      type: "string",
+      fieldset: 'translations'
+    }),
+  ],
 })
