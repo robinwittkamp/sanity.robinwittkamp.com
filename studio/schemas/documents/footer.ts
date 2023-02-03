@@ -32,7 +32,7 @@ export default defineType({
     }),
     defineField({
       name: "RepoHint",
-      title: "Note about the repository",
+      title: "Note about repository",
       type: "string",
     }),
   ],
