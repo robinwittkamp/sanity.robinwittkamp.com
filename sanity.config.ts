@@ -3,7 +3,7 @@ import {deskTool} from 'sanity/desk'
 import {languageFilter} from '@sanity/language-filter'
 import {media} from 'sanity-plugin-media'
 import {visionTool} from '@sanity/vision'
-import { withDocumentI18nPlugin, getDocumentList } from '@sanity/document-internationalization'
+import { documentI18n, withDocumentI18nPlugin, getDocumentList } from '@sanity/document-internationalization'
 
 import {schemaTypes} from './studio/schemas'
 import {deskStructure} from './studio/deskStructure'
@@ -13,25 +13,43 @@ export default defineConfig({
   title: 'robinwittkamp.com',
   projectId: 'rx62v1yc',
   dataset: 'production',
-  plugins: [
+  plugins: withDocumentI18nPlugin((pluginConfig) => ([
     deskTool({
       // Load custom desk structure
-      structure: deskStructure,
+      // structure: deskStructure,
+      // structure: (S, {schema}) => getDocumentList({S, schema, config: pluginConfig}),
+      // defaultDocumentNode: (S) =>
+      //   S.document().views([
+      //     S.view.form(),
+      //   ])
     }),
-    languageFilter({
-      supportedLanguages: [
-        {id: 'en', title: 'English'},
-        {id: 'de', title: 'Deutsch'},
-      ],
-      defaultLanguages: ['en'],
-      // Only show language filter for document type `page` (schemaType.name)
-      documentTypes: ['home', 'contact', 'imprint', 'privacy-policy', '404', '500'],
-      filterField: (enclosingType, field, selectedLanguageIds) =>
-        !enclosingType.name.startsWith('locale') || selectedLanguageIds.includes(field.name),
-    }),
+    // languageFilter({
+    //   supportedLanguages: [
+    //     {id: 'en', title: 'English'},
+    //     {id: 'de', title: 'Deutsch'},
+    //   ],
+    //   defaultLanguages: ['en'],
+    //   documentTypes: ['home', 'contact', 'imprint', 'privacy-policy', '404', '500'],
+    //   filterField: (enclosingType, field, selectedLanguageIds) =>
+    //     !enclosingType.name.startsWith('locale') || selectedLanguageIds.includes(field.name),
+    // }),
     media(),
     visionTool(),
-  ],
+  ]), {
+    includeDeskTool: false,
+    // i18n config:
+    base: "en",
+    languages: [
+      {
+        title: "English",
+        id: "en"
+      },
+      {
+        title: "Deutsch",
+        id: "de"
+      }
+    ],
+  }),
   schema: {
     types: schemaTypes,
   },
