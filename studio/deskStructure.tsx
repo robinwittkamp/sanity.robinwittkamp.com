@@ -1,4 +1,4 @@
-import { DocumentIcon, DocumentsIcon, HomeIcon, MenuIcon } from '@sanity/icons'
+import { DocumentIcon, DocumentsIcon, MenuIcon } from '@sanity/icons'
 
 export const deskStructure = (S) =>
   S.list()
@@ -16,7 +16,7 @@ export const deskStructure = (S) =>
             // List item: Home
             S.listItem()
               .title('Home')
-              .icon(HomeIcon)
+              .icon(DocumentIcon)
               .child(
                 // Document: Home
                 S.document().title('Home').schemaType('home').documentId('home')
