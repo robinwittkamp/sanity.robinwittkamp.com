@@ -1,11 +1,4 @@
-// Function for creating an emoji icon
-const emoji = (emoji: String) => {
-  return () => (
-    <span role="img" style={{ fontSize: "1.5rem" }}>
-      {emoji}
-    </span>
-  )
-}
+import { DocumentIcon, DocumentsIcon, HomeIcon, MenuIcon } from '@sanity/icons'
 
 export const deskStructure = (S) =>
   S.list()
@@ -14,7 +7,7 @@ export const deskStructure = (S) =>
       // List item: Pages
       S.listItem()
         .title('Pages')
-        .icon(emoji('📄'))
+        .icon(DocumentsIcon)
         .child(
           // List: Pages
           S.list()
@@ -23,7 +16,7 @@ export const deskStructure = (S) =>
             // List item: Home
             S.listItem()
               .title('Home')
-              .icon(emoji('🏠'))
+              .icon(HomeIcon)
               .child(
                 // Document: Home
                 S.document().title('Home').schemaType('home').documentId('home')
@@ -31,7 +24,7 @@ export const deskStructure = (S) =>
             // List item: About
             // S.listItem()
             //   .title('About')
-            //   .icon(emoji('👨‍💻'))
+            //   .icon(DocumentIcon)
             //   .child(
             //     // Document: About
             //     S.document().title('About').schemaType('about').documentId('about')
@@ -39,7 +32,7 @@ export const deskStructure = (S) =>
             // List item: Contact 
             S.listItem()
               .title('Contact')
-              .icon(emoji('📞'))
+              .icon(DocumentIcon)
               .child(
                 // Document: Contact
                 S.document().title('Contact').schemaType('contact').documentId('contact')
@@ -47,7 +40,7 @@ export const deskStructure = (S) =>
             // List item: Imprint
             S.listItem()
               .title('Imprint')
-              .icon(emoji('📜'))
+              .icon(DocumentIcon)
               .child(
                 // Document: Imprint
                 S.document().title('Imprint').schemaType('imprint').documentId('imprint')
@@ -55,7 +48,7 @@ export const deskStructure = (S) =>
             // List item: Privacy Policy
             S.listItem()
               .title('Privacy Policy')
-              .icon(emoji('🔒'))
+              .icon(DocumentIcon)
               .child(
                 // Document: Privacy Policy
                 S.document().title('Privacy Policy').schemaType('privacyPolicy').documentId('privacyPolicy')
@@ -63,7 +56,7 @@ export const deskStructure = (S) =>
             // List item: Error 404
             S.listItem()
             .title('404')
-            .icon(emoji('❗'))
+            .icon(DocumentIcon)
             .child(
               // Document: 404
               S.document().title('404').schemaType('404').documentId('404')
@@ -71,7 +64,7 @@ export const deskStructure = (S) =>
             // List item: Error 500
             S.listItem()
             .title('500')
-            .icon(emoji('❗'))
+            .icon(DocumentIcon)
             .child(
               // Document: 500
               S.document().title('500').schemaType('500').documentId('500')
@@ -82,7 +75,7 @@ export const deskStructure = (S) =>
       // List item: Navigations
       S.listItem()
         .title('Navigations')
-        .icon(emoji('🧭'))
+        .icon(MenuIcon)
         .child(
           // Document List: Navigations
           S.documentTypeList('navigation').title('Navigations')
