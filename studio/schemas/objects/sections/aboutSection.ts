@@ -14,13 +14,13 @@ export default defineType({
       name: 'paragraph',
       title: 'Paragraph',
       type: 'array', 
-      of: [{type: 'block'}]
+      of: [{ type: 'block' }]
     }),
     defineField({
       name: 'skills',
       title: 'Skills',
       type: 'array', 
-      of: [{type: 'block'}]
+      of: [{ type: 'block' }]
     }),
     // defineField({
     //   name: 'profilImage',
