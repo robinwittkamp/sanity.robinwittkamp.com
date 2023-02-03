@@ -6,9 +6,11 @@ import error404 from './documents/pages/404'
 import error500 from './documents/pages/500'
 // import author from './documents/author'
 import contact from './documents/pages/contact'
+import footer from './documents/footer'
+import header from './documents/header'
 import home from './documents/pages/home'
 import imprint from './documents/pages/imprint'
-import navigation from './documents/navigation'
+// import navigation from './documents/navigation'
 // import post from './documents/post'
 import privacyPolicy from './documents/pages/privacy-policy'
 
@@ -19,6 +21,7 @@ import contactForm from './objects/contactForm'
 import contactSection from './objects/sections/contactSection'
 import heroSection from './objects/sections/heroSection'
 import link from './objects/link'
+import navigation from './objects/navigation'
 import navigationItem from './objects/navigationItem'
 import pageMeta from './objects/pageMeta'
 import project from './objects/project'
@@ -33,9 +36,11 @@ export const schemaTypes = [
   contact,
   error404,
   error500,
+  footer,
+  header,
   home,
   imprint,
-  navigation,
+  // navigation,
   // post,
   privacyPolicy,
 
@@ -46,6 +51,7 @@ export const schemaTypes = [
   contactSection,
   heroSection,
   link,
+  navigation,
   navigationItem,
   pageMeta,
   project,

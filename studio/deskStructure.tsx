@@ -1,4 +1,4 @@
-import { DocumentIcon, DocumentsIcon, MenuIcon } from '@sanity/icons'
+import { DocumentIcon, DocumentsIcon, MenuIcon, StackIcon } from '@sanity/icons'
 
 export const deskStructure = (S) =>
   S.list()
@@ -71,14 +71,29 @@ export const deskStructure = (S) =>
             ),
           ])
         ),
-      // S.divider(),
       // List item: Navigations
+      // S.listItem()
+      //   .title('Navigations')
+      //   .icon(MenuIcon)
+      //   .child(
+      //     // Document List: Navigations
+      //     S.documentTypeList('navigation').title('Navigations')
+      //   ),
+      // List item: Header
       S.listItem()
-        .title('Navigations')
-        .icon(MenuIcon)
+        .title('Header')
+        .icon(StackIcon)
         .child(
-          // Document List: Navigations
-          S.documentTypeList('navigation').title('Navigations')
+          // Document: Header
+          S.document().title('Header').schemaType('header').documentId('header')
+        ),
+      // List item: Footer
+      S.listItem()
+        .title('Footer')
+        .icon(StackIcon)
+        .child(
+          // Document: Footer
+          S.document().title('Footer').schemaType('footer').documentId('footer')
         ),
       // S.divider(),
       // List out the rest of the document types, but filter out the singletons from above
@@ -90,7 +105,9 @@ export const deskStructure = (S) =>
           'privacyPolicy',
           '404',
           '500',
-          'navigation'
+          // 'navigation',
+          'header',
+          'footer',
         ].includes(listItem.getId())
       )
     ])
