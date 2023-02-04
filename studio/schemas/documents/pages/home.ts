@@ -4,6 +4,7 @@ export default defineType({
   name: 'home',
   title: 'Home',
   type: 'document',
+  i18n: true,
   groups: [
     {
       name: 'content',
