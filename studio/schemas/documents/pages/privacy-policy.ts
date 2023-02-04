@@ -4,6 +4,7 @@ export default defineType({
   name: 'privacyPolicy',
   title: 'Privacy Policy',
   type: 'document',
+  i18n: true,
   groups: [
     {
       name: 'content',
